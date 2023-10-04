@@ -4,5 +4,5 @@ import java.util.List;
 
 @FunctionalInterface
 public interface Checker {
-    void check(List<Segment> segments);
+    void check(List<Flight> flights);
 }
