@@ -31,6 +31,7 @@ public class FlightsFilter implements Checker {
     @Override
     public List<Flight> check(List<Flight> flights) {
         if (checkers.isEmpty()) {
+            System.out.println("Filters are not set");
             return flights;
         }
 
