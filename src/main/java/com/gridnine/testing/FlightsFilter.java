@@ -5,15 +5,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FlightsFilter implements Checker {
+
+//This class processing user implementation of filters
+ public class FlightsFilter implements Checker {
 
     private final Map<String, Checker> checkers = new HashMap<>();
 
+    //Add filter in map
     public void addChecker(String name, Checker checker) {
         checkers.put(name, checker);
     }
 
-    public void filter(String name, List<Flight> flights) {
+    //Execute filter by name
+    public void filtration(String name, List<Flight> flights) {
         if (checkers.containsKey(name)) {
             Checker checker = checkers.get(name);
             checker.check(flights);
@@ -28,6 +32,7 @@ public class FlightsFilter implements Checker {
         return checkers;
     }
 
+    //This method processing all custom filters added to the map, and exclude their result from test list of flight
     @Override
     public List<Flight> check(List<Flight> flights) {
         if (checkers.isEmpty()) {

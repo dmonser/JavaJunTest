@@ -16,6 +16,6 @@ public class Main {
         FLIGHTS_FILTER.addChecker(CHECK_TIME, FiltrationRules.createTimeCheck());
 
         List<Flight> filteredFlights = FLIGHTS_FILTER.check(flights);
-        System.out.println("Filtered flights:\n" + filteredFlights + " --- " + filteredFlights.size());
+        System.out.println("Filtered flights:\n" + filteredFlights);
     }
 }

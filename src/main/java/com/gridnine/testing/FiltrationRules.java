@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+//This class allows you to create a custom implementation of filters
 public class FiltrationRules {
     public static Checker createBeforeCheck() {
         return new Checker() {
